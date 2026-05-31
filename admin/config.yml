@@ -1,0 +1,220 @@
+# ============================================================
+# Decap CMS Configuration — Real Developments Ltd
+# ============================================================
+# BACKEND OPTIONS:
+#
+# Option A — Netlify (recommended if hosted on Netlify):
+backend:
+  name: git-gateway
+  branch: main
+#
+# Option B — GitHub OAuth (if NOT hosted on Netlify):
+# Uncomment the block below and comment out Option A above.
+# You'll also need to register a GitHub OAuth app at
+# github.com/settings/developers and configure a backend server.
+#
+# backend:
+#   name: github
+#   repo: your-github-username/real-developments-website
+#   branch: main
+
+# Media library — all uploaded images go here
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# ============================================================
+# COLLECTIONS
+# ============================================================
+
+collections:
+
+  # ── Global Settings (single instance) ──────────────────────
+  - name: "global"
+    label: "Global Settings"
+    files:
+      - name: "settings"
+        label: "Business Settings"
+        file: "content/global.json"
+        format: json
+        fields:
+          - { label: "Business Name", name: "businessName", widget: "string", default: "Real Developments Ltd" }
+          - { label: "Phone Number", name: "phone", widget: "string", default: "07435 442212" }
+          - { label: "Email Address", name: "email", widget: "string", default: "foreal@realdevelopments.uk" }
+          - { label: "Address", name: "address", widget: "string", default: "1 Fiennes Way, Sevenoaks, Kent" }
+          - label: "Social Media"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook URL", name: "facebook", widget: "string", default: "https://facebook.com/Ryan777g" }
+              - { label: "Instagram URL", name: "instagram", widget: "string", default: "https://instagram.com/realdevelopmentsltd" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", default: "https://www.linkedin.com/in/ryan-cunningham-988664400" }
+              - { label: "WhatsApp Number (international format)", name: "whatsapp", widget: "string", default: "+447435442212" }
+          - { label: "Checkatrade Profile URL", name: "checkatradeUrl", widget: "string", default: "https://www.checkatrade.com/trades/realdevelopments" }
+          - label: "Logo Alt Text"
+            name: "logoAlt"
+            widget: "string"
+            default: "Real Developments Ltd"
+
+  # ── Homepage (single instance) ─────────────────────────────
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "content/homepage.json"
+        format: json
+        fields:
+          - { label: "Hero Headline", name: "heroHeadline", widget: "string", default: "Built on Experience. Delivered with Precision." }
+          - { label: "Hero Subheading", name: "heroSubheading", widget: "string", default: "Specialist groundworks and construction across Sevenoaks, Tonbridge, and the surrounding Kent area." }
+          - label: "Trust Bar"
+            name: "trustBar"
+            widget: "object"
+            fields:
+              - { label: "Item 1 Label (years experience)", name: "item1", widget: "string", default: "Years Experience" }
+              - { label: "Item 2 Label (guarantee)", name: "item2", widget: "string", default: "Guaranteed Workmanship" }
+              - { label: "Item 3 Label (response)", name: "item3", widget: "string", default: "On-Site Response" }
+              - { label: "Item 4 Label (insurance)", name: "item4", widget: "string", default: "Insured Specialist Crew" }
+          - { label: "About / USP Text Block", name: "aboutText", widget: "text", default: "Every project we deliver is a reflection of our character, and our track record speaks for itself. We take pride in maintaining a clean, organised site throughout, treating every property with the same respect we'd expect in our own." }
+          - label: "Coverage Area Localities"
+            name: "coverageAreas"
+            widget: "list"
+            allow_add: true
+            field: { label: "Location", name: "location", widget: "string" }
+            default: ["Sevenoaks","Tonbridge","Royal Tunbridge Wells","Sundridge","Orpington","Otford","Kemsing","Ightham","Borough Green","South Borough","Hildenborough","Paddock Wood"]
+
+  # ── About Page (single instance) ───────────────────────────
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "content/about.json"
+        format: json
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "About Real Developments Ltd" }
+          - { label: "Page Subheading", name: "subheading", widget: "string", default: "Built on experience. Driven by pride in the work." }
+          - { label: "Story Text (paragraph 1)", name: "storyPara1", widget: "text" }
+          - { label: "Story Text (paragraph 2)", name: "storyPara2", widget: "text" }
+
+  # ── Contact Page (single instance) ─────────────────────────
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - name: "contact"
+        label: "Contact Page Content"
+        file: "content/contact.json"
+        format: json
+        fields:
+          - { label: "Intro Text", name: "introText", widget: "text", default: "Whether you have a fully scoped project or just an idea, we're happy to advise." }
+          - label: "Form Webhook URL"
+            name: "webhookUrl"
+            widget: "string"
+            hint: "This is the Make.com webhook URL where form submissions are sent. Only change this if instructed by your developer or Club Matic."
+            default: "https://hook.eu1.make.com/placeholder_webhook"
+
+  # ── Services (folder collection — one entry per service) ────
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Service Title", name: "title", widget: "string" }
+      - { label: "Short Description (shown on homepage card)", name: "description", widget: "text" }
+      - { label: "Full Description (shown on services page)", name: "fullDescription", widget: "text" }
+      - { label: "Icon / Image", name: "image", widget: "image", required: false }
+      - { label: "Sort Order", name: "order", widget: "number", value_type: "int", default: 1 }
+
+  # ── Gallery Images (folder collection) ─────────────────────
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Image", name: "src", widget: "image" }
+      - { label: "Alt Text (description of photo)", name: "alt", widget: "string" }
+      - { label: "Caption (optional)", name: "caption", widget: "string", required: false }
+      - { label: "Sort Order", name: "order", widget: "number", value_type: "int", default: 1 }
+
+  # ── Google Reviews (folder collection) ─────────────────────
+  - name: "google_reviews"
+    label: "Google Reviews"
+    folder: "content/reviews/google"
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Reviewer Name", name: "name", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Review Text", name: "text", widget: "text" }
+      - { label: "Rating (1–5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+
+  # ── Checkatrade Reviews (folder collection) ─────────────────
+  - name: "checkatrade_reviews"
+    label: "Checkatrade Reviews"
+    folder: "content/reviews/checkatrade"
+    create: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Reviewer Name", name: "name", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Review Text", name: "text", widget: "text" }
+      - { label: "Rating (1–5)", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+
+  # ── SEO: Groundworks Sevenoaks ──────────────────────────────
+  - name: "seo_sevenoaks"
+    label: "SEO: Groundworks Sevenoaks"
+    files:
+      - name: "sevenoaks"
+        label: "Groundworks Sevenoaks Page"
+        file: "content/seo/sevenoaks.json"
+        format: json
+        fields:
+          - { label: "H1 Headline", name: "h1", widget: "string", default: "Groundworks Sevenoaks" }
+          - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+
+  # ── SEO: Foundations Tonbridge ──────────────────────────────
+  - name: "seo_tonbridge"
+    label: "SEO: Foundations Tonbridge"
+    files:
+      - name: "tonbridge"
+        label: "Foundations Tonbridge Page"
+        file: "content/seo/tonbridge.json"
+        format: json
+        fields:
+          - { label: "H1 Headline", name: "h1", widget: "string", default: "Concrete Foundations Tonbridge" }
+          - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+
+  # ── SEO: Paving Tunbridge Wells ─────────────────────────────
+  - name: "seo_tunbridge_wells"
+    label: "SEO: Paving Tunbridge Wells"
+    files:
+      - name: "tunbridge_wells"
+        label: "Paving Tunbridge Wells Page"
+        file: "content/seo/tunbridge-wells.json"
+        format: json
+        fields:
+          - { label: "H1 Headline", name: "h1", widget: "string", default: "Porcelain Paving Tunbridge Wells" }
+          - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }

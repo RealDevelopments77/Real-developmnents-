@@ -1,0 +1,16 @@
+[
+  { "src": "/assets/images/uploads/paving-grey-stone-patio.jpg", "alt": "Grey stone porcelain patio — Sevenoaks", "caption": "Porcelain Paving", "order": 1 },
+  { "src": "/assets/images/uploads/paving-sandstone-curved-patio.jpg", "alt": "Sandstone curved patio — Kent", "caption": "Sandstone Patio", "order": 2 },
+  { "src": "/assets/images/uploads/paving-sandstone-pathway.jpg", "alt": "Sandstone pathway — Kent", "caption": "Sandstone Pathway", "order": 3 },
+  { "src": "/assets/images/uploads/paving-sandstone-front-driveway.jpg", "alt": "Sandstone front driveway", "caption": "Driveway Paving", "order": 4 },
+  { "src": "/assets/images/uploads/paving-sandstone-path-gate.jpg", "alt": "Sandstone path with gate posts", "caption": "Front Path & Gate", "order": 5 },
+  { "src": "/assets/images/uploads/paving-sandstone-with-fence.jpg", "alt": "Sandstone paving with fencing", "caption": "Paving & Fencing", "order": 6 },
+  { "src": "/assets/images/uploads/fencing-panel-concrete-base.jpg", "alt": "Fence panels with concrete block base", "caption": "Fencing", "order": 7 },
+  { "src": "/assets/images/uploads/fencing-panel-garden.jpg", "alt": "Garden fence panels — Kent", "caption": "Garden Fencing", "order": 8 },
+  { "src": "/assets/images/uploads/fencing-concrete-posts-gate.jpg", "alt": "Fencing with concrete posts and gate", "caption": "Fencing & Gates", "order": 9 },
+  { "src": "/assets/images/uploads/concrete-foundation-slab.jpg", "alt": "Concrete foundation slab — fresh pour", "caption": "Concrete Foundations", "order": 10 },
+  { "src": "/assets/images/uploads/repointing-brick-window.jpg", "alt": "Brick repointing — window surround", "caption": "Repointing", "order": 11 },
+  { "src": "/assets/images/uploads/repointing-brick-surround.jpg", "alt": "Brick repointing — before and after", "caption": "Brick Repointing", "order": 12 },
+  { "src": "/assets/images/uploads/exterior-painting-white-render.jpg", "alt": "Exterior white render — painting", "caption": "Exterior Painting", "order": 13 },
+  { "src": "/assets/images/uploads/exterior-painting-house-front.jpg", "alt": "House front exterior — painting project", "caption": "Exterior Painting", "order": 14 }
+]

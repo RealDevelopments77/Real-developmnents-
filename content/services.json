@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Concrete Foundations",
+    "description": "Concrete foundations for sheds, summer houses, greenhouses, garages, extensions and new builds. We dig, form and pour to the correct depth and specification — giving you a solid, level base that lasts for decades.",
+    "image": "assets/images/uploads/concrete-foundation-slab.jpg",
+    "link": "concrete-foundations.html",
+    "order": 1
+  },
+  {
+    "title": "External Property Restoration",
+    "description": "Repainting rendered and brick properties, repointing old and deteriorating brickwork, and restoring the exterior of your home to its best condition. We transform tired, weathered exteriors — refreshing the paintwork, re-rendering where needed, and repointing mortar joints.",
+    "image": "assets/images/uploads/exterior-painting-house-front.jpg",
+    "link": "external-restoration.html",
+    "order": 2
+  },
+  {
+    "title": "Landscaping",
+    "description": "Hard and soft landscaping that transforms outdoor spaces. Block paving, sandstone and porcelain patios, sleeper raised beds, steps, retaining walls and planting schemes — designed and built to last with proper groundworks foundations.",
+    "image": "assets/images/uploads/paving-sandstone-curved-patio.jpg",
+    "link": "landscaping.html",
+    "order": 3
+  },
+  {
+    "title": "Garden Renovation",
+    "description": "Complete garden renovations from start to finish. We clear, level, drain and reshape your outdoor space — then rebuild it exactly how you want it with new turf, paving, planting, fencing and garden structures.",
+    "image": "assets/images/uploads/paving-grey-stone-patio.jpg",
+    "link": "garden-renovation.html",
+    "order": 4
+  }
+]

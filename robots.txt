@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block CMS admin from indexing
+Disallow: /admin/
+
+# Block content JSON files from indexing
+Disallow: /content/
+
+Sitemap: https://www.realdevelopments.uk/sitemap.xml
