@@ -1609,18 +1609,23 @@ p {
   .trust-bar__checkatrade-icon svg { width: 9px; height: 9px; }
 
   /* Services — 2-col compact tiles, no stretched cards */
-  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-top: 0.875rem; align-items: start; }
-  #services.section { padding: 1.5rem 0 1.75rem; }
-  #services .text-center { margin-bottom: 0; }
-  #services .section-title { margin-bottom: 0.25rem; }
-  #services .section-subtitle { display: none; }
-  .service-card { padding: 0.7rem 0.65rem; text-align: left; border-left: 3px solid transparent; border-top: none; }
-  .service-card:hover { border-left-color: var(--green); }
-  .service-card__icon { width: 26px; height: 26px; margin: 0 0 0.4rem; }
-  .service-card__icon svg { width: 13px; height: 13px; }
-  .service-card h3 { font-size: 0.78rem; line-height: 1.3; margin-bottom: 0; }
-  .service-card p { display: none; }
-  .service-card__link { display: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; margin-top: 0.875rem !important; align-items: start !important; }
+  #services.section { padding: 1.5rem 0 1.75rem !important; }
+  #services .section-subtitle { display: none !important; }
+  .service-card { padding: 0.7rem 0.65rem !important; text-align: left !important; }
+  .service-card__icon { width: 26px !important; height: 26px !important; margin: 0 0 0.4rem !important; }
+  .service-card__icon svg { width: 13px !important; height: 13px !important; }
+  .service-card h3 { font-size: 0.78rem !important; line-height: 1.3 !important; margin-bottom: 0 !important; }
+  .service-card p { display: none !important; }
+  .service-card__link { display: none !important; }
+
+  /* Services page full cards — compact on mobile */
+  .services-full-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; align-items: start !important; }
+  .service-full-card__img { height: 110px !important; }
+  .service-full-card__body { padding: 0.65rem 0.65rem !important; }
+  .service-full-card__body h3 { font-size: 0.82rem !important; margin-bottom: 0.2rem !important; line-height: 1.3 !important; }
+  .service-full-card__body p { font-size: 0.7rem !important; line-height: 1.45 !important; display: -webkit-box !important; -webkit-line-clamp: 2 !important; -webkit-box-orient: vertical !important; overflow: hidden !important; }
+  .service-full-card__link { font-size: 0.72rem !important; }
 
   /* Gallery — clean 3-col grid, square items, no spanning */
   .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 0.3rem; margin-top: 0.75rem; }
