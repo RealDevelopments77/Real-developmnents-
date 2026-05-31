@@ -1638,12 +1638,9 @@ p {
   .section-title { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 0.5rem; }
   .section-subtitle { font-size: 0.82rem; }
 
-  /* About — full-width image on top, text underneath */
-  .about-highlight { display: flex; flex-direction: column; gap: 1rem; }
-  .about-highlight__text { width: 100%; }
-  .about-highlight__visual { display: block !important; order: -1; width: 100%; }
-  .about-visual-box { aspect-ratio: 16/9; }
-  .about-badge { display: none; }
+  /* About homepage — hide the visual, text only on mobile */
+  .about-highlight { display: block; }
+  .about-highlight__visual { display: none !important; }
   .about-highlight__quote { margin: 0.5rem 0; padding: 0.5rem 0.75rem; }
   .about-highlight__quote p { font-size: 0.85rem; }
 
@@ -2117,13 +2114,13 @@ p {
 /* ── Responsive — Ryan grid ───────────────────────────────── */
 @media (max-width: 768px) {
   .ryan-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 38%;
+    gap: 0.875rem;
+    align-items: start;
   }
   .ryan-photo-slot {
-    aspect-ratio: 16/9;
-    max-height: 220px;
-    order: -1;
+    aspect-ratio: 2/3;
+    max-height: none;
   }
 }
 
