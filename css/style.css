@@ -309,18 +309,22 @@ p {
 .nav__burger {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  width: 28px;
-  height: 22px;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
   position: relative;
   z-index: 1100;
+  border-radius: var(--radius);
 }
 
 .nav__burger span {
   display: block;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
+  width: 100%;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 3px;
   transition: all var(--transition);
   transform-origin: center;
 }
@@ -360,12 +364,13 @@ p {
 .nav__mobile a {
   display: block;
   font-family: 'Outfit', sans-serif;
-  font-size: var(--text-xl);
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--white);
-  padding: var(--space-sm) 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: color var(--transition);
+  letter-spacing: 0.01em;
 }
 
 .nav__mobile a:hover {
@@ -1546,8 +1551,10 @@ p {
 
   .nav__burger {
     display: flex;
-    width: 34px;
-    height: 26px;
+  }
+
+  .nav__logo img {
+    height: 36px;
   }
 
   /* Hero */
@@ -1560,16 +1567,24 @@ p {
   .hero__ctas { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
   .btn { padding: 0.7rem 1.4rem; font-size: 0.875rem; }
 
-  /* Trust bar — 4 items in one horizontal row */
-  .trust-bar__inner { grid-template-columns: repeat(4, 1fr); }
-  .trust-bar__stat { padding: 0.65rem 0.3rem; border-bottom: none; }
+  /* Trust bar — 3 stats in a row, Checkatrade centred underneath */
+  .trust-bar__inner { grid-template-columns: repeat(3, 1fr); }
+  .trust-bar__stat { padding: 0.75rem 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); }
+  .trust-bar__stat:nth-child(3) { border-right: none; }
   .trust-bar__stat::before { display: none; }
-  .trust-bar__stat-number { font-size: 1.1rem; margin-bottom: 0.1rem; }
-  .trust-bar__stat-label { font-size: 0.55rem; letter-spacing: 0; line-height: 1.3; }
+  .trust-bar__stat-number { font-size: 1.3rem; margin-bottom: 0.15rem; }
+  .trust-bar__stat-label { font-size: 0.62rem; letter-spacing: 0; line-height: 1.3; }
   .trust-bar__stat-sub { display: none; }
-  .trust-bar__stat--checkatrade { gap: 0.35rem; padding: 0.65rem 0.3rem; }
-  .trust-bar__checkatrade-icon { width: 26px; height: 26px; flex-shrink: 0; }
-  .trust-bar__checkatrade-icon svg { width: 13px; height: 13px; }
+  .trust-bar__stat--checkatrade {
+    grid-column: 1 / -1;
+    justify-content: center;
+    border-right: none;
+    border-bottom: none;
+    padding: 0.75rem 1rem;
+    gap: 0.6rem;
+  }
+  .trust-bar__checkatrade-icon { width: 28px; height: 28px; flex-shrink: 0; }
+  .trust-bar__checkatrade-icon svg { width: 14px; height: 14px; }
 
   /* Services — 4-col compact icon tiles */
   .services-grid { grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
