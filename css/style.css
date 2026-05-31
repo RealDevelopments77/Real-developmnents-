@@ -1595,18 +1595,18 @@ p {
   .hero__ctas { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
   .btn { padding: 0.7rem 1.4rem; font-size: 0.875rem; }
 
-  /* Trust bar — 2x2 grid, readable */
+  /* Trust bar — 2x2 grid, 50% thinner on mobile */
   .trust-bar__inner { grid-template-columns: repeat(2, 1fr); }
-  .trust-bar__stat { padding: 0.75rem 0.75rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .trust-bar__stat { padding: 0.35rem 0.5rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .trust-bar__stat:nth-child(even) { border-right: none; }
   .trust-bar__stat:nth-last-child(-n+2) { border-bottom: none; }
-  .trust-bar__stat--checkatrade { grid-column: auto; justify-content: flex-start; gap: 0.5rem; }
+  .trust-bar__stat--checkatrade { grid-column: auto; justify-content: flex-start; gap: 0.4rem; }
   .trust-bar__stat::before { display: none; }
-  .trust-bar__stat-number { font-size: 1.35rem; margin-bottom: 0.1rem; }
-  .trust-bar__stat-label { font-size: 0.7rem; letter-spacing: 0; line-height: 1.3; color: rgba(255,255,255,0.75); }
+  .trust-bar__stat-number { font-size: 1.05rem; margin-bottom: 0.04rem; }
+  .trust-bar__stat-label { font-size: 0.58rem; letter-spacing: 0; line-height: 1.2; color: rgba(255,255,255,0.75); }
   .trust-bar__stat-sub { display: none; }
-  .trust-bar__checkatrade-icon { width: 28px; height: 28px; flex-shrink: 0; }
-  .trust-bar__checkatrade-icon svg { width: 14px; height: 14px; }
+  .trust-bar__checkatrade-icon { width: 22px; height: 22px; flex-shrink: 0; }
+  .trust-bar__checkatrade-icon svg { width: 11px; height: 11px; }
 
   /* Services — 4-col compact icon tiles, section tighter */
   .services-grid { grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.875rem; }
@@ -1638,14 +1638,14 @@ p {
   .section-title { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 0.5rem; }
   .section-subtitle { font-size: 0.82rem; }
 
-  /* About — show photo right of text on mobile */
-  .about-highlight { display: flex; flex-direction: row; gap: 0.875rem; align-items: flex-start; }
-  .about-highlight__text { flex: 1; min-width: 0; }
-  .about-highlight__visual { display: block !important; flex: 0 0 38%; }
-  .about-visual-box { aspect-ratio: 3/4; }
+  /* About — full-width image on top, text underneath */
+  .about-highlight { display: flex; flex-direction: column; gap: 1rem; }
+  .about-highlight__text { width: 100%; }
+  .about-highlight__visual { display: block !important; order: -1; width: 100%; }
+  .about-visual-box { aspect-ratio: 16/9; }
   .about-badge { display: none; }
   .about-highlight__quote { margin: 0.5rem 0; padding: 0.5rem 0.75rem; }
-  .about-highlight__quote p { font-size: 0.8rem; }
+  .about-highlight__quote p { font-size: 0.85rem; }
 
   /* Reviews */
   .reviews-grid { grid-template-columns: 1fr; }
@@ -2117,13 +2117,13 @@ p {
 /* ── Responsive — Ryan grid ───────────────────────────────── */
 @media (max-width: 768px) {
   .ryan-grid {
-    grid-template-columns: 1fr 38%;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    align-items: start;
   }
   .ryan-photo-slot {
-    aspect-ratio: 3/4;
-    max-height: none;
+    aspect-ratio: 16/9;
+    max-height: 220px;
+    order: -1;
   }
 }
 
@@ -2437,30 +2437,27 @@ p {
   line-height: 1.7;
 }
 
-/* ── Logo Spin Animation ──────────────────────────────────── */
-@keyframes logoSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+/* ── Logo Spin Animation — 3D Y-axis (coin-flip rotation) ─── */
+@keyframes logoSpin3D {
+  0%   { transform: perspective(300px) rotateY(0deg); }
+  100% { transform: perspective(300px) rotateY(360deg); }
 }
 
 /* Nav logo */
 .nav__logo img {
-  animation: logoSpin 20s linear infinite;
-  transform-origin: center center;
+  animation: logoSpin3D 18s linear infinite;
   will-change: transform;
 }
 
 /* Hero brand logo */
 .hero__brand img {
-  animation: logoSpin 20s linear infinite;
-  transform-origin: center center;
+  animation: logoSpin3D 18s linear infinite;
   will-change: transform;
 }
 
 /* Footer logo */
 .footer__brand img {
-  animation: logoSpin 20s linear infinite;
-  transform-origin: center center;
+  animation: logoSpin3D 18s linear infinite;
   will-change: transform;
 }
 
