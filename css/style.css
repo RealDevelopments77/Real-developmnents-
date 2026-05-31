@@ -1869,6 +1869,10 @@ p {
   margin: 0 auto;
 }
 
+/* Photo is first in HTML (for mobile float), but placed in col 2 on desktop */
+.ryan-grid .ryan-photo-slot { grid-column: 2; grid-row: 1; }
+.ryan-grid .ryan-body       { grid-column: 1; grid-row: 1; }
+
 .ryan-photo-slot {
   aspect-ratio: 3/4;
   background: linear-gradient(160deg, #1a1a1a 0%, #2a2a2a 100%);
@@ -2116,20 +2120,27 @@ p {
 
 /* ── Responsive — Ryan grid ───────────────────────────────── */
 @media (max-width: 768px) {
+  /* Switch to float layout — photo is first in DOM so float works correctly */
   .ryan-grid {
-    display: block; /* float layout — text wraps around photo then fills below */
+    display: block;
   }
   .ryan-grid::after {
     content: '';
     display: table;
     clear: both;
   }
-  .ryan-photo-slot {
+  .ryan-grid .ryan-photo-slot {
     float: right;
     width: 38%;
     aspect-ratio: 2/3;
     max-height: none;
     margin: 0 0 0.75rem 0.875rem;
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .ryan-grid .ryan-body {
+    grid-column: unset;
+    grid-row: unset;
   }
 }
 
