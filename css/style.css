@@ -1595,18 +1595,18 @@ p {
   .hero__ctas { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
   .btn { padding: 0.7rem 1.4rem; font-size: 0.875rem; }
 
-  /* Trust bar — 2x2 grid, 50% thinner on mobile */
+  /* Trust bar — 2x2 grid, very compact */
   .trust-bar__inner { grid-template-columns: repeat(2, 1fr); }
-  .trust-bar__stat { padding: 0.35rem 0.5rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .trust-bar__stat { padding: 0.2rem 0.5rem; border-right: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .trust-bar__stat:nth-child(even) { border-right: none; }
   .trust-bar__stat:nth-last-child(-n+2) { border-bottom: none; }
-  .trust-bar__stat--checkatrade { grid-column: auto; justify-content: flex-start; gap: 0.4rem; }
+  .trust-bar__stat--checkatrade { grid-column: auto; justify-content: flex-start; gap: 0.3rem; }
   .trust-bar__stat::before { display: none; }
-  .trust-bar__stat-number { font-size: 1.05rem; margin-bottom: 0.04rem; }
-  .trust-bar__stat-label { font-size: 0.58rem; letter-spacing: 0; line-height: 1.2; color: rgba(255,255,255,0.75); }
+  .trust-bar__stat-number { font-size: 0.85rem; margin-bottom: 0; font-weight: 800; }
+  .trust-bar__stat-label { font-size: 0.5rem; letter-spacing: 0; line-height: 1.2; color: rgba(255,255,255,0.7); }
   .trust-bar__stat-sub { display: none; }
-  .trust-bar__checkatrade-icon { width: 22px; height: 22px; flex-shrink: 0; }
-  .trust-bar__checkatrade-icon svg { width: 11px; height: 11px; }
+  .trust-bar__checkatrade-icon { width: 18px; height: 18px; flex-shrink: 0; }
+  .trust-bar__checkatrade-icon svg { width: 9px; height: 9px; }
 
   /* Services — 4-col compact icon tiles, section tighter */
   .services-grid { grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.875rem; }
