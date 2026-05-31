@@ -20,6 +20,11 @@ function throttle(fn, delay) {
   if (!nav) return;
 
   function updateNav() {
+    if (window.innerWidth <= 768) {
+      nav.classList.remove('transparent');
+      nav.classList.add('scrolled');
+      return;
+    }
     if (window.scrollY > 60) {
       nav.classList.remove('transparent');
       nav.classList.add('scrolled');
@@ -30,6 +35,7 @@ function throttle(fn, delay) {
   }
 
   window.addEventListener('scroll', throttle(updateNav, 50), { passive: true });
+  window.addEventListener('resize', throttle(updateNav, 100), { passive: true });
   updateNav();
 
   /* Active link highlight */
