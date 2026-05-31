@@ -1608,18 +1608,18 @@ p {
   .trust-bar__checkatrade-icon { width: 18px; height: 18px; flex-shrink: 0; }
   .trust-bar__checkatrade-icon svg { width: 9px; height: 9px; }
 
-  /* Services — 4-col compact icon tiles, section tighter */
-  .services-grid { grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.875rem; }
+  /* Services — 2-col readable grid on mobile */
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-top: 0.875rem; }
   #services.section { padding: 1.5rem 0 1.75rem; }
   #services .text-center { margin-bottom: 0; }
   #services .section-title { margin-bottom: 0.25rem; }
   #services .section-subtitle { display: none; }
-  .service-card { padding: 0.6rem 0.35rem; text-align: center; border-left: none; border-top: 2px solid transparent; }
-  .service-card:hover { border-top-color: var(--green); border-left-color: transparent; }
-  .service-card__icon { width: 28px; height: 28px; margin: 0 auto 0.35rem; }
+  .service-card { padding: 0.75rem 0.75rem; text-align: left; border-left: 3px solid transparent; border-top: none; }
+  .service-card:hover { border-left-color: var(--green); }
+  .service-card__icon { width: 28px; height: 28px; margin: 0 0 0.5rem; }
   .service-card__icon svg { width: 14px; height: 14px; }
-  .service-card h3 { font-size: 0.58rem; line-height: 1.25; margin-bottom: 0; }
-  .service-card p { display: none; }
+  .service-card h3 { font-size: 0.78rem; line-height: 1.3; margin-bottom: 0.2rem; }
+  .service-card p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.7rem; line-height: 1.5; margin-bottom: 0; }
   .service-card__link { display: none; }
 
   /* Gallery — clean 3-col grid, square items, no spanning */
@@ -1644,10 +1644,13 @@ p {
   .about-highlight__quote { margin: 0.5rem 0; padding: 0.5rem 0.75rem; }
   .about-highlight__quote p { font-size: 0.85rem; }
 
-  /* Reviews */
-  .reviews-grid { grid-template-columns: 1fr; }
+  /* Reviews — 2-col grid on mobile */
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
   .reviews-tabs { flex-direction: column; }
-  .review-card__text { font-size: 0.875rem; }
+  .review-card { padding: 0.875rem; }
+  .review-card__text { font-size: 0.75rem; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+  .review-card__author { font-size: 0.6rem; }
+  .review-card__stars svg { width: 14px; height: 14px; }
 
   /* Impact CTA */
   .impact-cta { padding: var(--space-xl) 0; }
@@ -2114,13 +2117,19 @@ p {
 /* ── Responsive — Ryan grid ───────────────────────────────── */
 @media (max-width: 768px) {
   .ryan-grid {
-    grid-template-columns: 1fr 38%;
-    gap: 0.875rem;
-    align-items: start;
+    display: block; /* float layout — text wraps around photo then fills below */
+  }
+  .ryan-grid::after {
+    content: '';
+    display: table;
+    clear: both;
   }
   .ryan-photo-slot {
+    float: right;
+    width: 38%;
     aspect-ratio: 2/3;
     max-height: none;
+    margin: 0 0 0.75rem 0.875rem;
   }
 }
 
