@@ -1011,6 +1011,7 @@ p {
   color: rgba(255,255,255,0.55);
   font-size: var(--text-sm);
   transition: color var(--transition);
+  white-space: nowrap;
 }
 
 .footer__col ul li a:hover {
@@ -1539,7 +1540,7 @@ p {
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--space-md); }
   .about-highlight { grid-template-columns: 1fr; }
   .about-highlight__visual { display: none; }
   .contact-grid { grid-template-columns: 1fr; }
