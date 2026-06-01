@@ -381,15 +381,82 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (page === 'about.html') {
-    loadContent('/content/about.json', []);
+    loadContent('/content/about.json', [
+      { selector: '[data-cms="about.pageH1"]',      key: 'pageH1' },
+      { selector: '[data-cms="about.pageSubheading"]', key: 'pageSubheading' },
+      { selector: '[data-cms="about.storyH2"]',     key: 'storyH2' },
+      { selector: '[data-cms="about.storyPara1"]',  key: 'storyPara1' },
+      { selector: '[data-cms="about.storyPara2"]',  key: 'storyPara2' },
+      { selector: '[data-cms="about.storyPara3"]',  key: 'storyPara3' },
+      { selector: '[data-cms="about.ryanH2"]',      key: 'ryanH2' },
+      { selector: '[data-cms="about.ryanSubtitle"]',key: 'ryanSubtitle' },
+      { selector: '[data-cms="about.ryanBio1"]',    key: 'ryanBio1' },
+      { selector: '[data-cms="about.ryanBio2"]',    key: 'ryanBio2' },
+      { selector: '[data-cms="about.ryanQuote"]',   key: 'ryanQuote' },
+      { selector: '[data-cms="about.valuesHeading"]', key: 'valuesHeading' },
+      { selector: '[data-cms="about.value1Title"]', key: 'value1Title' },
+      { selector: '[data-cms="about.value1Text"]',  key: 'value1Text' },
+      { selector: '[data-cms="about.value2Title"]', key: 'value2Title' },
+      { selector: '[data-cms="about.value2Text"]',  key: 'value2Text' },
+      { selector: '[data-cms="about.value3Title"]', key: 'value3Title' },
+      { selector: '[data-cms="about.value3Text"]',  key: 'value3Text' },
+      { selector: '[data-cms="about.value4Title"]', key: 'value4Title' },
+      { selector: '[data-cms="about.value4Text"]',  key: 'value4Text' },
+      { selector: '[data-cms="about.value5Title"]', key: 'value5Title' },
+      { selector: '[data-cms="about.value5Text"]',  key: 'value5Text' },
+      { selector: '[data-cms="about.value6Title"]', key: 'value6Title' },
+      { selector: '[data-cms="about.value6Text"]',  key: 'value6Text' },
+      { selector: '[data-cms="about.ctaHeading"]',  key: 'ctaHeading' },
+      { selector: '[data-cms="about.ctaText"]',     key: 'ctaText' },
+    ]);
+    loadContent('/content/global.json', [
+      { selector: '[data-cms="global.phone"]', key: 'phone' },
+    ]);
   }
 
   if (page === 'gallery.html') {
-    loadContent('/content/gallery.json', []);
+    loadContent('/content/gallery.json', [
+      { selector: '[data-cms="gallery.heading"]',   key: 'heading' },
+      { selector: '[data-cms="gallery.subtitle"]',  key: 'subtitle' },
+      { selector: '[data-cms="gallery.ctaHeading"]',key: 'ctaHeading' },
+      { selector: '[data-cms="gallery.ctaText"]',   key: 'ctaText' },
+    ]);
+    loadContent('/content/global.json', [
+      { selector: '[data-cms="global.phone"]', key: 'phone' },
+    ]);
+  }
+
+  if (page === 'services.html') {
+    loadContent('/content/services-page.json', [
+      { selector: '[data-cms="servicesPage.heading"]',      key: 'heading' },
+      { selector: '[data-cms="servicesPage.subtitle"]',     key: 'subtitle' },
+      { selector: '[data-cms="servicesPage.card1Title"]',   key: 'card1Title' },
+      { selector: '[data-cms="servicesPage.card1Desc"]',    key: 'card1Desc' },
+      { selector: '[data-cms="servicesPage.card2Title"]',   key: 'card2Title' },
+      { selector: '[data-cms="servicesPage.card2Desc"]',    key: 'card2Desc' },
+      { selector: '[data-cms="servicesPage.card3Title"]',   key: 'card3Title' },
+      { selector: '[data-cms="servicesPage.card3Desc"]',    key: 'card3Desc' },
+      { selector: '[data-cms="servicesPage.pricingHeading"]',key: 'pricingHeading' },
+      { selector: '[data-cms="servicesPage.pricingText"]',  key: 'pricingText' },
+      { selector: '[data-cms="servicesPage.ctaHeading"]',   key: 'ctaHeading' },
+      { selector: '[data-cms="servicesPage.ctaText"]',      key: 'ctaText' },
+    ]);
+    loadContent('/content/global.json', [
+      { selector: '[data-cms="global.phone"]', key: 'phone' },
+    ]);
   }
 
   if (page === 'contact.html') {
-    loadContent('/content/contact.json', []);
+    loadContent('/content/contact.json', [
+      { selector: '[data-cms="contact.pageH1"]',       key: 'pageH1' },
+      { selector: '[data-cms="contact.pageSubheading"]',key: 'pageSubheading' },
+      { selector: '[data-cms="contact.heading"]',      key: 'heading' },
+      { selector: '[data-cms="contact.introText"]',    key: 'introText' },
+    ]);
+    loadContent('/content/global.json', [
+      { selector: '[data-cms="global.phone"]', key: 'phone' },
+      { selector: '[data-cms="global.email"]', key: 'email' },
+    ]);
   }
 });
 
@@ -429,7 +496,8 @@ async function renderGallery() {
   try {
     const res = await fetch('/content/gallery.json');
     if (!res.ok) return;
-    const images = await res.json();
+    const data = await res.json();
+    const images = Array.isArray(data) ? data : (data.items || []);
 
     grid.innerHTML = images.map(img => `
       <div class="gallery-full-item">

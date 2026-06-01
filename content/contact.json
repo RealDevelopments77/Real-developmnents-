@@ -1,4 +1,7 @@
 {
-  "introText": "Whether you have a fully scoped project or just an idea, we're happy to advise. Fill in the form and we'll get back to you quickly — or call Ryan directly for an immediate response.",
+  "pageH1": "Request a Free Quote",
+  "pageSubheading": "All enquiries are handled personally by Ryan. No call centres, no delays.",
+  "heading": "Let's Talk About Your Project",
+  "introText": "Whether you have a fully scoped project or just an idea, we're happy to advise. Fill in the form and we'll get back to you quickly, or call Ryan directly.",
   "webhookUrl": "https://hook.eu1.make.com/placeholder_webhook"
 }

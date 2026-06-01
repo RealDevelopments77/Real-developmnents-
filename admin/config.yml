@@ -135,7 +135,7 @@ collections:
           - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
           - { label: "CTA Text", name: "ctaText", widget: "text" }
 
-  # ── About Page (single instance) ───────────────────────────
+  # ── About Page ─────────────────────────────────────────────
   - name: "about"
     label: "About Page"
     files:
@@ -144,12 +144,34 @@ collections:
         file: "content/about.json"
         format: json
         fields:
-          - { label: "Page Title", name: "title", widget: "string", default: "About Real Developments Ltd" }
-          - { label: "Page Subheading", name: "subheading", widget: "string", default: "Built on experience. Driven by pride in the work." }
-          - { label: "Story Text (paragraph 1)", name: "storyPara1", widget: "text" }
-          - { label: "Story Text (paragraph 2)", name: "storyPara2", widget: "text" }
+          - { label: "Page H1", name: "pageH1", widget: "string" }
+          - { label: "Page Subheading", name: "pageSubheading", widget: "string" }
+          - { label: "Story Heading", name: "storyH2", widget: "string" }
+          - { label: "Story Paragraph 1", name: "storyPara1", widget: "text" }
+          - { label: "Story Paragraph 2", name: "storyPara2", widget: "text" }
+          - { label: "Story Paragraph 3", name: "storyPara3", widget: "text" }
+          - { label: "Ryan Section Heading", name: "ryanH2", widget: "string" }
+          - { label: "Ryan Subtitle", name: "ryanSubtitle", widget: "string" }
+          - { label: "Ryan Bio Paragraph 1", name: "ryanBio1", widget: "text" }
+          - { label: "Ryan Bio Paragraph 2", name: "ryanBio2", widget: "text" }
+          - { label: "Ryan Quote", name: "ryanQuote", widget: "string" }
+          - { label: "Values Heading", name: "valuesHeading", widget: "string" }
+          - { label: "Value 1 Title", name: "value1Title", widget: "string" }
+          - { label: "Value 1 Text", name: "value1Text", widget: "text" }
+          - { label: "Value 2 Title", name: "value2Title", widget: "string" }
+          - { label: "Value 2 Text", name: "value2Text", widget: "text" }
+          - { label: "Value 3 Title", name: "value3Title", widget: "string" }
+          - { label: "Value 3 Text", name: "value3Text", widget: "text" }
+          - { label: "Value 4 Title", name: "value4Title", widget: "string" }
+          - { label: "Value 4 Text", name: "value4Text", widget: "text" }
+          - { label: "Value 5 Title", name: "value5Title", widget: "string" }
+          - { label: "Value 5 Text", name: "value5Text", widget: "text" }
+          - { label: "Value 6 Title", name: "value6Title", widget: "string" }
+          - { label: "Value 6 Text", name: "value6Text", widget: "text" }
+          - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
 
-  # ── Contact Page (single instance) ─────────────────────────
+  # ── Contact Page ────────────────────────────────────────────
   - name: "contact"
     label: "Contact Page"
     files:
@@ -158,39 +180,58 @@ collections:
         file: "content/contact.json"
         format: json
         fields:
-          - { label: "Intro Text", name: "introText", widget: "text", default: "Whether you have a fully scoped project or just an idea, we're happy to advise." }
+          - { label: "Page H1", name: "pageH1", widget: "string" }
+          - { label: "Page Subheading", name: "pageSubheading", widget: "string" }
+          - { label: "Section Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
           - label: "Form Webhook URL"
             name: "webhookUrl"
             widget: "string"
-            hint: "This is the Make.com webhook URL where form submissions are sent. Only change this if instructed by your developer or Club Matic."
-            default: "https://hook.eu1.make.com/placeholder_webhook"
+            hint: "Make.com webhook URL. Only change if instructed by Club Matic."
 
-  # ── Services (folder collection — one entry per service) ────
-  - name: "services"
-    label: "Services"
-    folder: "content/services"
-    create: true
-    format: json
-    slug: "{{slug}}"
-    fields:
-      - { label: "Service Title", name: "title", widget: "string" }
-      - { label: "Short Description (shown on homepage card)", name: "description", widget: "text" }
-      - { label: "Full Description (shown on services page)", name: "fullDescription", widget: "text" }
-      - { label: "Icon / Image", name: "image", widget: "image", required: false }
-      - { label: "Sort Order", name: "order", widget: "number", value_type: "int", default: 1 }
+  # ── Services Page ───────────────────────────────────────────
+  - name: "services_page"
+    label: "Services Page"
+    files:
+      - name: "services_page"
+        label: "Services Page Content"
+        file: "content/services-page.json"
+        format: json
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Page Subtitle", name: "subtitle", widget: "text" }
+          - { label: "Card 1 Title", name: "card1Title", widget: "string" }
+          - { label: "Card 1 Description", name: "card1Desc", widget: "text" }
+          - { label: "Card 2 Title", name: "card2Title", widget: "string" }
+          - { label: "Card 2 Description", name: "card2Desc", widget: "text" }
+          - { label: "Card 3 Title", name: "card3Title", widget: "string" }
+          - { label: "Card 3 Description", name: "card3Desc", widget: "text" }
+          - { label: "Pricing Heading", name: "pricingHeading", widget: "string" }
+          - { label: "Pricing Text", name: "pricingText", widget: "text" }
+          - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
 
-  # ── Gallery Images (folder collection) ─────────────────────
-  - name: "gallery"
+  # ── Gallery Page ────────────────────────────────────────────
+  - name: "gallery_page"
     label: "Gallery"
-    folder: "content/gallery"
-    create: true
-    format: json
-    slug: "{{slug}}"
-    fields:
-      - { label: "Image", name: "src", widget: "image" }
-      - { label: "Alt Text (description of photo)", name: "alt", widget: "string" }
-      - { label: "Caption (optional)", name: "caption", widget: "string", required: false }
-      - { label: "Sort Order", name: "order", widget: "number", value_type: "int", default: 1 }
+    files:
+      - name: "gallery_page"
+        label: "Gallery Page Content & Images"
+        file: "content/gallery.json"
+        format: json
+        fields:
+          - { label: "Page Heading", name: "heading", widget: "string" }
+          - { label: "Page Subtitle", name: "subtitle", widget: "string" }
+          - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
+          - label: "Gallery Images"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Sort Order", name: "order", widget: "number", value_type: "int", default: 1 }
 
   # ── Google Reviews (folder collection) ─────────────────────
   - name: "google_reviews"
