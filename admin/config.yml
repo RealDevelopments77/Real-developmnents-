@@ -50,6 +50,7 @@ collections:
               - { label: "LinkedIn URL", name: "linkedin", widget: "string", default: "https://www.linkedin.com/in/ryan-cunningham-988664400" }
               - { label: "WhatsApp Number (international format)", name: "whatsapp", widget: "string", default: "+447435442212" }
           - { label: "Checkatrade Profile URL", name: "checkatradeUrl", widget: "string", default: "https://www.checkatrade.com/trades/realdevelopments" }
+          - { label: "Footer Description", name: "footerDesc", widget: "text" }
           - label: "Logo Alt Text"
             name: "logoAlt"
             widget: "string"
@@ -64,23 +65,75 @@ collections:
         file: "content/homepage.json"
         format: json
         fields:
-          - { label: "Hero Headline", name: "heroHeadline", widget: "string", default: "Built on Experience. Delivered with Precision." }
-          - { label: "Hero Subheading", name: "heroSubheading", widget: "string", default: "Specialist groundworks and construction across Sevenoaks, Tonbridge, and the surrounding Kent area." }
+          # Hero
+          - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
+          - { label: "Hero Subheading", name: "heroSubheading", widget: "string" }
+
+          # Trust Bar
           - label: "Trust Bar"
             name: "trustBar"
             widget: "object"
             fields:
-              - { label: "Item 1 Label (years experience)", name: "item1", widget: "string", default: "Years Experience" }
-              - { label: "Item 2 Label (guarantee)", name: "item2", widget: "string", default: "Guaranteed Workmanship" }
-              - { label: "Item 3 Label (response)", name: "item3", widget: "string", default: "On-Site Response" }
-              - { label: "Item 4 Label (insurance)", name: "item4", widget: "string", default: "Insured Specialist Crew" }
-          - { label: "About / USP Text Block", name: "aboutText", widget: "text", default: "Every project we deliver is a reflection of our character, and our track record speaks for itself. We take pride in maintaining a clean, organised site throughout, treating every property with the same respect we'd expect in our own." }
+              - { label: "Stat 1 Label", name: "item1", widget: "string" }
+              - { label: "Stat 2 Label", name: "item2", widget: "string" }
+              - { label: "Stat 3 Label", name: "item3", widget: "string" }
+
+          # Services Section
+          - { label: "Services Section Heading", name: "servicesHeading", widget: "string" }
+          - { label: "Services Section Subtitle", name: "servicesSubtitle", widget: "text" }
+          - { label: "Service 1 Name", name: "service1Name", widget: "string" }
+          - { label: "Service 1 Description", name: "service1Desc", widget: "text" }
+          - { label: "Service 2 Name", name: "service2Name", widget: "string" }
+          - { label: "Service 2 Description", name: "service2Desc", widget: "text" }
+          - { label: "Service 3 Name", name: "service3Name", widget: "string" }
+          - { label: "Service 3 Description", name: "service3Desc", widget: "text" }
+          - { label: "Service 4 Name", name: "service4Name", widget: "string" }
+          - { label: "Service 4 Description", name: "service4Desc", widget: "text" }
+          - { label: "Service 5 Name", name: "service5Name", widget: "string" }
+          - { label: "Service 5 Description", name: "service5Desc", widget: "text" }
+          - { label: "Service 6 Name", name: "service6Name", widget: "string" }
+          - { label: "Service 6 Description", name: "service6Desc", widget: "text" }
+          - { label: "Service 7 Name", name: "service7Name", widget: "string" }
+          - { label: "Service 7 Description", name: "service7Desc", widget: "text" }
+          - { label: "Service 8 Name", name: "service8Name", widget: "string" }
+          - { label: "Service 8 Description", name: "service8Desc", widget: "text" }
+
+          # Gallery Preview
+          - { label: "Gallery Section Heading", name: "galleryHeading", widget: "string" }
+          - { label: "Gallery Section Subtitle", name: "gallerySubtitle", widget: "string" }
+          - { label: "Gallery Image 1 Label", name: "galleryLabel1", widget: "string" }
+          - { label: "Gallery Image 2 Label", name: "galleryLabel2", widget: "string" }
+          - { label: "Gallery Image 3 Label", name: "galleryLabel3", widget: "string" }
+          - { label: "Gallery Image 4 Label", name: "galleryLabel4", widget: "string" }
+          - { label: "Gallery Image 5 Label", name: "galleryLabel5", widget: "string" }
+
+          # Reviews Section
+          - { label: "Reviews Section Heading", name: "reviewsHeading", widget: "string" }
+          - { label: "Google Review 1 Text", name: "googleReview1Text", widget: "text" }
+          - { label: "Google Review 1 Author", name: "googleReview1Author", widget: "string" }
+          - { label: "Google Review 2 Text", name: "googleReview2Text", widget: "text" }
+          - { label: "Google Review 2 Author", name: "googleReview2Author", widget: "string" }
+          - { label: "Google Review 3 Text", name: "googleReview3Text", widget: "text" }
+          - { label: "Google Review 3 Author", name: "googleReview3Author", widget: "string" }
+          - { label: "Checkatrade Review 1 Text", name: "checkatradeReview1Text", widget: "text" }
+          - { label: "Checkatrade Review 1 Author", name: "checkatradeReview1Author", widget: "string" }
+          - { label: "Checkatrade Review 2 Text", name: "checkatradeReview2Text", widget: "text" }
+          - { label: "Checkatrade Review 2 Author", name: "checkatradeReview2Author", widget: "string" }
+          - { label: "Checkatrade Review 3 Text", name: "checkatradeReview3Text", widget: "text" }
+          - { label: "Checkatrade Review 3 Author", name: "checkatradeReview3Author", widget: "string" }
+
+          # Coverage Section
+          - { label: "Coverage Section Heading", name: "coverageHeading", widget: "string" }
+          - { label: "Coverage Section Subtitle", name: "coverageSubtitle", widget: "string" }
           - label: "Coverage Area Localities"
             name: "coverageAreas"
             widget: "list"
             allow_add: true
             field: { label: "Location", name: "location", widget: "string" }
-            default: ["Sevenoaks","Tonbridge","Royal Tunbridge Wells","Sundridge","Orpington","Otford","Kemsing","Ightham","Borough Green","South Borough","Hildenborough","Paddock Wood"]
+
+          # CTA Section
+          - { label: "CTA Heading", name: "ctaHeading", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
 
   # ── About Page (single instance) ───────────────────────────
   - name: "about"
