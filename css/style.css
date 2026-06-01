@@ -1071,9 +1071,13 @@ p {
 /* ── Page Header (inner pages) ─────────────────────────────── */
 .page-header {
   background: var(--dark);
-  padding: calc(var(--nav-h) + var(--space-xl)) 0 var(--space-xl);
+  padding: calc(var(--nav-h) + 4.8rem) 0 4.8rem;
   position: relative;
   overflow: hidden;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 4.8vw, 4rem);
 }
 
 .page-header::before {
@@ -2528,7 +2532,7 @@ p {
 @media (max-width: 768px) {
   /* trust-bar__inner overridden to 4-col single row in main 768px block above */
   .location-services-grid { grid-template-columns: 1fr; }
-  .service-detail-gallery { grid-template-columns: 1fr; }
+  .service-detail-gallery { grid-template-columns: repeat(2, 1fr); }
   .service-detail-gallery img:first-child { grid-column: span 1; height: 180px; }
   .location-cards { grid-template-columns: 1fr; }
 }
