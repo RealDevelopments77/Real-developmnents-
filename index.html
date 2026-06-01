@@ -30,6 +30,8 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css?v=3">
+  <!-- Netlify Identity — required to handle invite/login redirects -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <!-- LocalBusiness + AggregateRating JSON-LD Schema -->
   <!-- NOTE: Update ratingCount and ratingValue once the site goes live with verified data -->
@@ -666,5 +668,16 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
