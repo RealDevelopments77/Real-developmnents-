@@ -67,6 +67,14 @@
     <a href="contact.html" class="btn btn--primary mt-md">Get a Free Quote</a>
   </nav>
 
+  <style>
+    .who-we-are-img-wrap { overflow:hidden; border-radius:8px; position:relative; }
+    .who-we-are-img-wrap img { width:100%; height:420px; object-fit:cover; transition:transform 0.4s ease; display:block; }
+    .who-we-are-img-wrap:hover img { transform:scale(1.05); }
+    .who-we-are-img-tag { position:absolute; bottom:14px; right:14px; background:rgba(0,102,55,0.92); color:#fff; padding:7px 14px; border-radius:4px; font-size:0.8rem; font-weight:600; font-family:'Outfit',sans-serif; pointer-events:none; }
+    @media(max-width:768px){ .about-story-grid { grid-template-columns:1fr !important; } }
+  </style>
+
   <main>
     <header class="page-header" aria-label="Page header">
       <div class="container page-header__content">
@@ -79,13 +87,19 @@
     <!-- About Story -->
     <section class="section" aria-labelledby="story-heading">
       <div class="container">
-        <div class="about-story">
+        <div class="about-story-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
           <div class="fade-up">
             <span class="section-label">Who We Are</span>
             <h2 id="story-heading" class="section-title">Plan Right.<br>Work Smart.</h2>
-            <p>Real Developments Ltd has built its reputation on a simple principle: plan right, work smart. Every project we deliver is a reflection of our character, and our track record speaks for itself.</p>
-            <p style="margin-top:var(--space-sm);">We take pride in maintaining a clean, organised site throughout, treating every property with the same respect we'd expect in our own. We only specify and supply top-tier materials, because quality is never a compromise.</p>
-            <p style="margin-top:var(--space-sm);">Our work is carried out by a respectful, hardworking team who are committed to getting it right, and everything we do is fully guaranteed. Customer satisfaction isn't just a goal; it's the standard we hold ourselves to on every job.</p>
+            <p>Real Developments Ltd has built its reputation on a simple principle: plan right, work smart. Every project delivered is a direct reflection of the standards we hold ourselves to — and the track record speaks for itself.</p>
+            <p style="margin-top:var(--space-sm);">We take pride in maintaining a clean, organised site throughout every job, treating each property with the same respect we would expect for our own. Only top-tier materials are specified and supplied, because quality is never a compromise — on any project, at any scale.</p>
+            <p style="margin-top:var(--space-sm);">Every project is handled with meticulous attention to detail and a genuine commitment to getting it right. All work is fully guaranteed, and client satisfaction isn't treated as a target — it's the standard Ryan holds himself to on every single job.</p>
+          </div>
+          <div class="fade-up stagger-2">
+            <div class="who-we-are-img-wrap">
+              <img src="assets/images/uploads/exterior-painting-house-front.jpg" alt="Exterior painting of property — Real Developments Ltd" loading="lazy">
+              <span class="who-we-are-img-tag">Exterior painting Of property</span>
+            </div>
           </div>
         </div>
       </div>

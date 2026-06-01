@@ -66,7 +66,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "50",
+      "reviewCount": "40",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -154,7 +154,7 @@
             <div class="hero__checkatrade-badge__text">
               <span class="hero__checkatrade-badge__verified">Verified Member</span>
               <span class="hero__checkatrade-badge__name">Checkatrade</span>
-              <span class="hero__checkatrade-badge__rating">50+ 5-star reviews</span>
+              <span class="hero__checkatrade-badge__rating">40+ 10-star reviews</span>
             </div>
           </a>
 
@@ -178,8 +178,8 @@
           </div>
 
           <div class="trust-bar__stat">
-            <div class="trust-bar__stat-number" data-count-up="50" data-suffix="+">50+</div>
-            <div class="trust-bar__stat-label">5-Star Reviews</div>
+            <div class="trust-bar__stat-number" data-count-up="40" data-suffix="+">40+</div>
+            <div class="trust-bar__stat-label">10-Star Reviews</div>
             <div class="trust-bar__stat-sub">Google &amp; Checkatrade</div>
           </div>
 
@@ -204,12 +204,13 @@
     </div>
 
     <!-- ── 3. Services Section ──────────────────────────────── -->
-    <section class="section section--light" id="services" aria-labelledby="services-heading">
-      <div class="container">
+    <section class="section" id="services" aria-labelledby="services-heading" style="position:relative;background-image:url('assets/images/uploads/paving-sandstone-curved-patio.jpg');background-size:cover;background-position:center;color:#fff;">
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(3px);z-index:0;"></div>
+      <div class="container" style="position:relative;z-index:1;">
         <div class="text-center fade-up">
-          <span class="section-label">What We Do</span>
-          <h2 id="services-heading" class="section-title">Our Specialist Services</h2>
-          <p class="section-subtitle" style="margin:0 auto var(--space-md);">From concrete foundations to full garden renovations, every job delivered to the highest standard.</p>
+          <span class="section-label" style="color:var(--green);">What We Do</span>
+          <h2 id="services-heading" class="section-title" style="color:#fff;">Our Specialist Services</h2>
+          <p class="section-subtitle" style="margin:0 auto var(--space-md);color:rgba(255,255,255,0.8);">From concrete foundations to full garden renovations, every job delivered to the highest standard.</p>
         </div>
 
         <div class="services-grid" id="servicesGrid">
@@ -289,37 +290,7 @@
         </div>
 
         <div class="text-center mt-lg fade-up">
-          <a href="services.html" class="btn btn--outline-green">View All Services</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 4. About Highlight ────────────────────────────────── -->
-    <section class="section" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="about-highlight">
-          <div class="about-highlight__text">
-            <span class="section-label fade-up">About Us</span>
-            <h2 id="about-heading" class="section-title fade-up stagger-1">Plan Right.<br>Work Smart.</h2>
-
-            <div class="about-highlight__quote fade-up stagger-2">
-              <p>"Plan right, work smart. Not just a tagline. It's how we operate on every single job."</p>
-            </div>
-
-            <p class="fade-up stagger-3" data-cms="homepage.aboutText">Based in Sevenoaks, Real Developments Ltd has been delivering specialist groundworks and construction across Kent for over 25 years. Every project is handled with the same precision, care and respect for your property.</p>
-            <p class="fade-up stagger-4">From first enquiry to final handover, Ryan is personally involved at every stage. No subcontractors, no shortcuts, no hidden costs. Just honest trades, properly done.</p>
-
-            <div class="mt-lg fade-up stagger-5">
-              <a href="about.html" class="btn btn--primary">Learn More About Us</a>
-            </div>
-          </div>
-
-          <div class="about-highlight__visual fade-up stagger-2">
-            <div class="about-visual-box about-visual-box--photo">
-              <img src="assets/images/uploads/ryan-portrait.jpg" alt="Ryan Cunningham, Founder of Real Developments Ltd" loading="lazy">
-              <div class="about-badge">25+<span>Years Experience</span></div>
-            </div>
-          </div>
+          <a href="services.html" class="btn btn--outline">View All Services</a>
         </div>
       </div>
     </section>
@@ -462,40 +433,55 @@
         <!-- Checkatrade Reviews Panel -->
         <div class="reviews-panel" id="panel-checkatrade" role="tabpanel" aria-labelledby="tab-checkatrade">
           <div class="reviews-grid">
-            <!-- REPLACE WITH ACTUAL CHECKATRADE REVIEW -->
             <article class="review-card fade-up stagger-1">
-              <div class="review-card__stars" aria-label="5 stars">
+              <div class="review-card__stars" aria-label="10 out of 10">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span style="font-size:0.75rem;font-weight:700;margin-left:4px;color:var(--green);">10/10</span>
               </div>
               <p class="review-card__text">"I had my exterior render painted including the wooden soffits, repairing cracks and painting the tiled sills. The job required full scaffold and was completed on time to an exceptional quality. Ryan went above and beyond — even re-painted my down pipes with no extra charge. I recommend Real Developments Ltd and they are my first call for future jobs."</p>
               <span class="review-card__author">Full exterior painting &amp; drive work · TN14</span>
             </article>
 
-            <!-- REPLACE WITH ACTUAL CHECKATRADE REVIEW -->
             <article class="review-card fade-up stagger-2">
-              <div class="review-card__stars" aria-label="5 stars">
+              <div class="review-card__stars" aria-label="10 out of 10">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span style="font-size:0.75rem;font-weight:700;margin-left:4px;color:var(--green);">10/10</span>
               </div>
               <p class="review-card__text">"Ryan did an amazing job for us in building our garden patio. The work was done to a very high standard and he was always tidy and courteous."</p>
               <span class="review-card__author">Patio building · TN9</span>
             </article>
 
-            <!-- REPLACE WITH ACTUAL CHECKATRADE REVIEW -->
             <article class="review-card fade-up stagger-3">
-              <div class="review-card__stars" aria-label="5 stars">
+              <div class="review-card__stars" aria-label="10 out of 10">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span style="font-size:0.75rem;font-weight:700;margin-left:4px;color:var(--green);">10/10</span>
               </div>
               <p class="review-card__text">"Ryan did a great job — understood exactly what was required, didn't try to make it more complicated than necessary and completed the work efficiently and with minimal disruption. The finished job looks good and the site was left tidy."</p>
               <span class="review-card__author">Small retaining wall · TN13</span>
@@ -650,12 +636,12 @@
         <div class="footer__col">
           <h4>Services</h4>
           <ul>
-            <li><a href="concrete-foundations.html">Concrete Foundations</a></li>
-            <li><a href="external-restoration.html">External Restoration</a></li>
             <li><a href="landscaping.html">Landscaping</a></li>
             <li><a href="garden-renovation.html">Garden Renovation</a></li>
-            <li><a href="groundworks-sevenoaks.html">Groundworks Sevenoaks</a></li>
+            <li><a href="concrete-foundations.html">Concrete Foundations</a></li>
+            <li><a href="external-restoration.html">External Restoration</a></li>
             <li><a href="concrete-foundations-tonbridge.html">Foundations Tonbridge</a></li>
+            <li><a href="groundworks-sevenoaks.html">Groundworks Sevenoaks</a></li>
             <li><a href="porcelain-paving-tunbridge-wells.html">Paving Tunbridge Wells</a></li>
           </ul>
         </div>
