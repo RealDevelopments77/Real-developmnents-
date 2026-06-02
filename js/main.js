@@ -3,7 +3,7 @@
    ============================================================ */
 
 /* ── Webhook target (update if Make webhook URL changes) ─────── */
-const WEBHOOK_URL = 'https://hook.eu1.make.com/placeholder_webhook';
+const WEBHOOK_URL = 'https://hook.eu1.make.com/3qd2cwx7uuvx7u05pmk55vb7pt1wck52';
 
 /* ── Utility: throttle ────────────────────────────────────────── */
 function throttle(fn, delay) {
