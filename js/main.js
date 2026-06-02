@@ -266,6 +266,9 @@ function throttle(fn, delay) {
 
     if (!valid) return;
 
+    const honeypot = form.querySelector('#hp_website');
+    if (honeypot && honeypot.value) return;
+
     const submitBtn = form.querySelector('[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending…';

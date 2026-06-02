@@ -198,6 +198,12 @@
                   <div class="file-upload-names" id="fileUploadNames" aria-live="polite"></div>
                 </div>
 
+                <!-- Honeypot — hidden from real users, catches bots -->
+                <div style="display:none !important;position:absolute;left:-9999px;" aria-hidden="true">
+                  <label for="hp_website">Website</label>
+                  <input type="text" id="hp_website" name="hp_website" tabindex="-1" autocomplete="off">
+                </div>
+
                 <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">Send Enquiry</button>
               </form>
             </div>
